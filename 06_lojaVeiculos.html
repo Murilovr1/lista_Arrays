@@ -10,11 +10,56 @@
     //Apresente a lista final de cada tipo de veículo.
 
     //ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
 
+    let veiculo1 = prompt("Informe o 1 veículo:").trim();
+    let veiculo2 = prompt("Informe o 2 veículo:").trim();
+    let veiculo3 = prompt("Informe o 3 véiculo:").trim();
+
+    let tipoCar1 = prompt("Informe se o 1 veículo é: SUV, Sedan ou Hatch.").trim().toUpperCase();
+    let tipoCar2 = prompt("Informe se o 2 veículo é: SUV, Sedan ou Hatch.").trim().toUpperCase();
+    let tipoCar3 = prompt("Informe se o 3 veículo é: SUV, Sedan ou Hatch.").trim().toUpperCase();
 
     //PROCESSAMENTO
-
+    if (veiculo1) {
+        if (tipoCar1 == "SUV") {
+            carrosSUV.push(veiculo1);
+        }
+        else if (tipoCar1 == "SEDAN") {
+            carrosSedan.push(veiculo1);
+        }
+        else if (tipoCar1 == "HATCH") {
+            carrosHatch.push(veiculo1);
+        }
+    }
+    if (veiculo2) {
+        if (tipoCar2 == "SUV") {
+            carrosSUV.push(veiculo2);
+        }
+        else if (tipoCar2 == "SEDAN") {
+            carrosSedan.push(veiculo2);
+        }
+        else if (tipoCar2 == "HATCH") {
+            carrosHatch.push(veiculo2);
+        }
+    }
+    if (veiculo3) {
+        if (tipoCar3 == "SUV") {
+            carrosSUV.push(veiculo3);
+        }
+        else if (tipoCar3 == "SEDAN") {
+            carrosSedan.push(veiculo3);
+        }
+        else if (tipoCar3 == "HATCH")  {
+            carrosHatch.push(veiculo3);
+        }
+    }
 
     //SAÍDA
+    alert(`SUV: `+carrosSUV);
+    alert(`Sedam: `+carrosSedan);
+    alert(`Hatch: `+carrosHatch);
 
 </script>
