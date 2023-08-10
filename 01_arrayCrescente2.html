@@ -4,11 +4,27 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2).
 
     //ENTRADA
+    const n1 = parseFloat(prompt("Insira um número").trim());
+    const n2 = parseFloat(prompt("Insira outro número").trim());
 
 
     //PROCESSAMENTO
+    const arrayVazio = [];
+    if (n1 > n2) {
+        arrayVazio = [n2, n1];
+        
+    }
+    else {
+        arrayVazio = [];
+        if (n1 < n2) {
+            arrayVazio = [n1, n2]
+            
+        }
+    }
+
 
 
     //SAÍDA
-    
+    document.write(`A ordem é ${arrayVazio}`);
+
 </script>

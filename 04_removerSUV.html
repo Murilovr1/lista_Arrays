@@ -5,12 +5,33 @@
     //Pergunte ao usuário qual carro deseja REMOVER da lista.
     //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
 
-    //ENTRADA
+    //ENTRADA   
 
+    const carro = prompt(`Qual carro vc quer retirar da lista? TI-Tiggo|| SP-Sportage || TU-Tucson || EC-EcoSport`).trim().toUpperCase();
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const guardar = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
 
     //PROCESSAMENTO
 
+    if (carro.length > 2) {
+        alert(`Resposta inválida`)
+    }
+    if (carro == "TI") {
+        carrosSUV.splice(0, 1);
+    }
+    if (carro == "SP") {
+        carrosSUV.splice(1, 1);
+    }
+    if (carro == "TU") {
+        carrosSUV.splice(2, 1);  
+    }
+    if (carro == "EC") {
+        carrosSUV.splice(3, 1);  
+    }
+
+
 
     //SAÍDA
+    document.write(`A lista de antes era ${guardar} e a de agr é ${carrosSUV}`);
 
 </script>
