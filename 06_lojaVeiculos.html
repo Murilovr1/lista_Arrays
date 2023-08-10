@@ -10,56 +10,34 @@
     //Apresente a lista final de cada tipo de veículo.
 
     //ENTRADA
+
+    alert ("CarrosSUV = Tiggo, Sportage, Tucson, EcoSport \nCarrosSedan = Civic, Corolla, Arizzo, Fusion\nCarrosHatch = 308, Focus, i30")
+
+    const veiculoNovo1 = prompt("Qual carro deseja adicionar?")
+    const lista1 = parseInt(prompt(`Em qual lista deseja adicionar o ${veiculoNovo1}? 1-SUV, 2-Sedan ou 3-Hatch.`).toLowerCase())
+    const veiculoNovo2 = prompt("Qual carro deseja adicionar?")
+    const lista2 = parseInt(prompt(`Em qual lista deseja adicionar o ${veiculoNovo2}? 1-SUV, 2-Sedan ou 3-Hatch.`).toLowerCase())
+    const veiculoNovo3 = prompt("Qual carro deseja adicionar?")
+    const lista3 = parseInt(prompt(`Em qual lista deseja adicionar o ${veiculoNovo3}? 1-SUV, 2-Sedan ou 3-Hatch.`).toLowerCase())
+
+    //PROCESSAMENTO
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let carrosHatch = ["308", "Focus", "i30"];
+    
+    (lista1 == 1)? carrosSUV.push(veiculoNovo1):
+    (lista1 == 2)?carrosSedan.push(veiculoNovo1):
+    carrosHatch.push(veiculoNovo1);
 
-    let veiculo1 = prompt("Informe o 1 veículo:").trim();
-    let veiculo2 = prompt("Informe o 2 veículo:").trim();
-    let veiculo3 = prompt("Informe o 3 véiculo:").trim();
+    (lista2 == 1)? carrosSUV.push(veiculoNovo2):
+    (lista2 == 2)?carrosSedan.push(veiculoNovo2):
+    carrosHatch.push(veiculoNovo2);
 
-    let tipoCar1 = prompt("Informe se o 1 veículo é: SUV, Sedan ou Hatch.").trim().toUpperCase();
-    let tipoCar2 = prompt("Informe se o 2 veículo é: SUV, Sedan ou Hatch.").trim().toUpperCase();
-    let tipoCar3 = prompt("Informe se o 3 veículo é: SUV, Sedan ou Hatch.").trim().toUpperCase();
-
-    //PROCESSAMENTO
-    if (veiculo1) {
-        if (tipoCar1 == "SUV") {
-            carrosSUV.push(veiculo1);
-        }
-        else if (tipoCar1 == "SEDAN") {
-            carrosSedan.push(veiculo1);
-        }
-        else if (tipoCar1 == "HATCH") {
-            carrosHatch.push(veiculo1);
-        }
-    }
-    if (veiculo2) {
-        if (tipoCar2 == "SUV") {
-            carrosSUV.push(veiculo2);
-        }
-        else if (tipoCar2 == "SEDAN") {
-            carrosSedan.push(veiculo2);
-        }
-        else if (tipoCar2 == "HATCH") {
-            carrosHatch.push(veiculo2);
-        }
-    }
-    if (veiculo3) {
-        if (tipoCar3 == "SUV") {
-            carrosSUV.push(veiculo3);
-        }
-        else if (tipoCar3 == "SEDAN") {
-            carrosSedan.push(veiculo3);
-        }
-        else if (tipoCar3 == "HATCH")  {
-            carrosHatch.push(veiculo3);
-        }
-    }
-
+    (lista3 == 1)? carrosSUV.push(veiculoNovo3):
+    (lista3 == 2)?carrosSedan.push(veiculoNovo3):
+    carrosHatch.push(veiculoNovo3);
     //SAÍDA
-    alert(`SUV: `+carrosSUV);
-    alert(`Sedam: `+carrosSedan);
-    alert(`Hatch: `+carrosHatch);
+    alert(`Carros SUV: ${carrosSUV.join(", ")}\nCarros Sedan: ${carrosSedan.join(", ")}\nCarros Hatch: ${carrosHatch.join(", ")}`);
 
+  
 </script>
